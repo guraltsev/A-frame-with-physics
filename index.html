@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title>A-frame scene with physics</title>
+  </head>
+  <!-- This is a comment -->
+  <body>
+    <!-- Any a-frame scene is contained inside an <a-scene> tag. -->
+    <a-scene>
+      <!-- A scene consists of entities. Entities by themselves do not contain or display anything. You must endow them with components. 
+         See the documentation for a list of components -->
+
+      <!-- This is the camera -->
+      <a-entity id="rig" position="0 1.6 0">
+        <a-entity
+          id="camera"
+          camera="fov:55"
+          look-controls
+          wasd-controls
+        ></a-entity>
+      </a-entity>
+
+      <!-- These are two boxes-->
+      <a-entity
+        id="Box 1"
+        geometry="primitive: box"
+        material="color: red"
+        position="1 0 -3"
+        rotation="0 0 0"
+      ></a-entity>
+
+      <a-entity
+        id="Box 2"
+        geometry="primitive: box"
+        material="color: blue"
+        position="-1 0 -5"
+        rotation="0 45 0"
+      ></a-entity>
+
+      <!-- This is the floor and sky (making it a more pleasant color than white)-->
+      <a-entity
+        geometry="primitive: plane; width: 20; height: 20"
+        material="color: #7BC8A4; side: double"
+        height="100"
+        width="100"
+        rotation="-90 0 0"
+      ></a-entity>
+
+      <a-sky color="#BCBCBC"></a-sky>
+    </a-scene>
+  </body>
+</html>
