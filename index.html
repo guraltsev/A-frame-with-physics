@@ -13,15 +13,11 @@
     <title>A-frame scene with physics</title>
   </head>
   <body>
-    <a-scene>
+    <!-- To enable debugging pass physics="debug: true" to the a-scene -->
+    <a-scene physics>
       <!-- This is the camera -->
-      <a-entity id="rig" position="0 1.6 0">
-        <a-entity
-          id="camera"
-          camera="fov:55"
-          look-controls
-          wasd-controls
-        ></a-entity>
+      <a-entity id="rig" wasd-controls position="0 1.6 0">
+        <a-entity id="camera" camera="fov:55" look-controls></a-entity>
       </a-entity>
 
       <!-- These are two boxes-->
@@ -38,7 +34,7 @@
         geometry="primitive: box"
         material="color: red"
         position="1 10 -3"
-        rotation="0 0 0"
+        rotation="0 0 50"
       ></a-entity>
 
       <a-entity
